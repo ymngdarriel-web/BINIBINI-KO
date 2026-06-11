@@ -1,0 +1,364 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Binibini 💛</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- MUSIC -->
+
+<audio id="bgMusic" loop>
+    <source src="music/music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-toggle" onclick="toggleMusic()">
+    🎵
+</button>
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        For My Binibini 💛
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#home">HOME</a>
+        </li>
+
+        <li>
+            <a href="#garden">MEMORIES</a>
+        </li>
+
+        <li>
+            <a href="#letters">LETTERS</a>
+        </li>
+
+        <li>
+            <a href="#surprise">SURPRISE</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<!-- HOME SECTION -->
+
+<section id="home" class="hero">
+
+    <div class="hero-left">
+
+        <div class="serving">
+            NOW SERVING
+        </div>
+
+        <h1>
+            HAPPY<br>
+            BIRTHDAY
+        </h1>
+
+        <h2>
+            My Binibini Ko 💛
+        </h2>
+
+        <p class="birthday-message">
+
+            Happy 31st Birthday Binibini ko. 💛
+
+            Today is a beautiful reminder that the world was blessed the day you were born.
+
+            Thank you for bringing happiness, warmth and love into my life.
+
+            No matter where life takes us, my heart will always choose you.
+
+            I love you more than words can ever express. ✨
+
+        </p>
+
+        <button class="garden-btn"
+            onclick="scrollToGarden()">
+
+            💛 ENTER MY GARDEN
+
+        </button>
+
+    </div>
+
+    <div class="hero-right">
+
+        <img
+            src="assets/cake.png"
+            alt="Birthday Cake"
+            class="cake-image">
+
+    </div>
+
+</section>
+
+<!-- FLOWER GARDEN -->
+
+<section id="garden">
+
+    <h2 class="section-title">
+
+        My Flower Garden
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        12 Memories Of My Binibini
+
+    </p>
+
+    <div class="flower-garden">
+
+        <div class="flower-heart">
+
+            <div class="heart-flowers">
+
+                🌻 🌹 💙 🌻 🌹 💙
+                <br>
+                🌼 🌷 🪻 🌼 🌷
+
+            </div>
+
+            <div class="heart-text">
+
+                You are the most beautiful flower in the garden of my life.
+
+                <br><br>
+
+                Happy Birthday Mahal Ko. 💛
+
+            </div>
+
+        </div>
+
+        <!-- 12 MEMORY PHOTOS -->
+
+        <div class="memory photo1"
+            onclick="openMemory(1)">
+            <img src="images/photo1.jpg">
+        </div>
+
+        <div class="memory photo2"
+            onclick="openMemory(2)">
+            <img src="images/photo2.jpg">
+        </div>
+
+        <div class="memory photo3"
+            onclick="openMemory(3)">
+            <img src="images/photo3.jpg">
+        </div>
+
+        <div class="memory photo4"
+            onclick="openMemory(4)">
+            <img src="images/photo4.jpg">
+        </div>
+
+        <div class="memory photo5"
+            onclick="openMemory(5)">
+            <img src="images/photo5.jpg">
+        </div>
+
+        <div class="memory photo6"
+            onclick="openMemory(6)">
+            <img src="images/photo6.jpg">
+        </div>
+
+        <div class="memory photo7"
+            onclick="openMemory(7)">
+            <img src="images/photo7.jpg">
+        </div>
+
+        <div class="memory photo8"
+            onclick="openMemory(8)">
+            <img src="images/photo8.jpg">
+        </div>
+
+        <div class="memory photo9"
+            onclick="openMemory(9)">
+            <img src="images/photo9.jpg">
+        </div>
+
+        <div class="memory photo10"
+            onclick="openMemory(10)">
+            <img src="images/photo10.jpg">
+        </div>
+
+        <div class="memory photo11"
+            onclick="openMemory(11)">
+            <img src="images/photo11.jpg">
+        </div>
+
+        <div class="memory photo12"
+            onclick="openMemory(12)">
+            <img src="images/photo12.jpg">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MEMORY POPUP -->
+
+<div id="memoryModal" class="modal">
+
+    <div class="memory-card">
+
+        <button
+            class="close-btn"
+            onclick="closeMemory()">
+
+            ×
+
+        </button>
+
+        <div class="memory-photo">
+
+            <img
+                id="memoryImage"
+                src="">
+
+        </div>
+
+        <div class="memory-note">
+
+            <h3 id="memoryTitle">
+
+                MEMORY NOTE
+
+            </h3>
+
+            <div id="memoryLetter">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- LETTER BOOK -->
+
+<section id="letters">
+
+    <h2 class="section-title">
+
+        My Letters For You
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Words From My Heart
+
+    </p>
+
+    <div class="book-container">
+
+        <button
+            class="book-arrow"
+            onclick="previousLetter()">
+
+            ◀
+
+        </button>
+
+        <div class="book">
+
+            <div class="book-page">
+
+                <h3 id="letterTitle">
+
+                    Letter 1 💛
+
+                </h3>
+
+                <div id="bookLetter">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button
+            class="book-arrow"
+            onclick="nextLetter()">
+
+            ▶
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- SURPRISE -->
+
+<section id="surprise">
+
+    <h2>
+
+        A Special Surprise 💛
+
+    </h2>
+
+    <button
+        class="gift-btn"
+        onclick="showSurprise()">
+
+        🎁 OPEN GIFT
+
+    </button>
+
+</section>
+
+<!-- MUSIC PLAYER BAR -->
+
+<div class="player-bar">
+
+    <div class="song-info">
+
+        🎵 Palagi
+
+    </div>
+
+    <div class="controls">
+
+        <button onclick="toggleMusic()">
+
+            ▶ / ❚❚
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
